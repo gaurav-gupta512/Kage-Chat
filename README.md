@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kage Chat
 
-## Getting Started
+**Kage Chat** is a modern web application inspired by platforms like NGL. It allows verified users to receive anonymous messages through a shared link, without requiring the sender to sign in.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js** – Core React framework for building the web app
+- **MongoDB** – For storing user data and messages
+- **Resend** – Used for email functionality (e.g., verification)
+- **shadcn/ui** – For building a clean and modern component-based UI
+- **next-auth (Credentials Provider)** – For user authentication
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## User Experience
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Anonymous Messaging**: Anyone with a user’s shareable link can send a message without creating an account.
+- **Authentication**: Users sign in using the **Credentials Provider** from `next-auth`.
+- **Dashboard**: Logged-in users access a private dashboard where they can:
+  - View messages sent to them
+  - Delete unwanted or inappropriate messages
+- **Live Updates**: Messages are automatically fetched from the MongoDB database every 5 seconds to ensure users see new feedback in real-time.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Key Features
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Anonymous feedback system (like NGL)
+- No sign-in required for message senders
+- Secure, email-verified user access
+- Real-time message updates
+- Clean and minimal design using shadcn/ui
